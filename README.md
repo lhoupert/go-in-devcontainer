@@ -16,7 +16,7 @@ Build the container with:
 ./make.sh
 ```
 
-Then open the dev environement in VSCode using the [devcontainer](https://code.visualstudio.com/docs/devcontainers/containers)
+Then open the dev environement in VSCode using the [devcontainer](https://code.visualstudio.com/docs/devcontainers/containers). Make sure devcontainer is added to your path (e.g. for a user john.doe `/Users/john.doe/Library/Application\ Support/Code/User/globalStorage/ms-vscode-remote.remote-containers/cli-bin`) 
 
 ```shell
 devcontainer open .
