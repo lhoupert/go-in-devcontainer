@@ -1,0 +1,27 @@
+version: "3.9"
+networks:
+  go_network:
+    driver: bridge
+
+services:
+  go:
+    container_name: go
+    image: loic-crc/go
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    volumes:
+      - '../:/src'
+    cap_drop:
+      - all
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - go_network
+    ulimits:
+      nofile: 20000
+      nproc: 1000
+    tty: true
+    stdin_open: true
+    restart: "no"
+
